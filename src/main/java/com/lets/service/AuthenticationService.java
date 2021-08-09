@@ -29,7 +29,7 @@ public class AuthenticationService {
 
 		Optional<LoginModel> result = loginRepository.findByUsername(login.getUserName());
 		if(result.isPresent())
-			return "Not Registerd: Email already Exist";
+			return "Oops!: Email already Exist";
 		LoginModel loginData = new LoginModel();
 		loginData.setUserName(login.getUserName());
 		loginData.setPassword(login.getPassword());
